@@ -136,6 +136,23 @@
         .track-button-header:hover { color: #fff !important; }
         .track-button-header:focus { color: #000 !important; }
 
+        /* === Global hamburger icon styles (black icon, all breakpoints) === */
+        .hamburger-menu-wrapper {
+            display: none; /* shown via media queries on mobile/tablet */
+            justify-content: center;
+            align-items: center;
+            padding: 8px;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .hamburger-menu-wrapper i {
+            font-size: 22px;
+            color: #000;
+            line-height: 1;
+        }
+
         @media (max-width: 520px) {
             .track-modal { padding: 1rem; border-radius: 12px; }
             .track-actions { justify-content: stretch; }
@@ -224,39 +241,6 @@
 
             .nav-link:last-child {
                 border-bottom: none;
-            }
-
-            .hamburger-menu-wrapper {
-                display: none !important;
-                flex-direction: column;
-                cursor: pointer;
-                padding: 8px;
-                gap: 5px;
-                background: none;
-                border: none;
-            }
-
-            .hamburger-menu-bar-top,
-            .hamburger-menu-bar-middle,
-            .hamburger-menu-bar-bottom {
-                width: 24px;
-                height: 2.5px;
-                background: #000;
-                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-                border-radius: 1px;
-            }
-
-            .hamburger-menu-wrapper.open .hamburger-menu-bar-top {
-                transform: rotate(45deg) translate(8px, 8px);
-            }
-
-            .hamburger-menu-wrapper.open .hamburger-menu-bar-middle {
-                opacity: 0;
-                transform: translateX(-8px);
-            }
-
-            .hamburger-menu-wrapper.open .hamburger-menu-bar-bottom {
-                transform: rotate(-45deg) translate(8px, -8px);
             }
 
             .header-right-col {
@@ -825,6 +809,7 @@
 
                     <div class="header-right-col">
                         <button class="hamburger-menu-wrapper" aria-label="Toggle menu" aria-expanded="false" type="button">
+                            <i class="fa-solid fa-bars"></i>
                         </button>
                         <!-- Track shipment button: opens a modal -->
                     </div>
