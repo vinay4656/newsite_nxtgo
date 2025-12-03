@@ -2508,7 +2508,6 @@ textarea.w-select {
 
 .uui-logos03_logo {
     height: 3rem;
-    filter: grayscale(100%);
     transition: all 0.3s ease;
 }
 
